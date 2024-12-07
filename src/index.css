@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Button styling */
+.btn {
+  background: #fff;
+  color: #212121;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .btn {
+    font-size: 14px; /* Slightly smaller font size */
+    padding: 12px 20px; /* Adjust padding for better fit */
+  }
+
+  .btn img {
+    width: 18px; /* Smaller icon */
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .btn {
+    font-size: 13px; /* Reduce font size further for small screens */
+    padding: 10px 18px; /* Adjust button padding */
+  }
+
+  .btn img {
+    width: 16px; /* Even smaller icon for smaller screens */
+    margin-left: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .btn {
+    font-size: 12px; /* Further reduce font size for very small screens */
+    padding: 8px 15px; /* Smaller button padding */
+  }
+
+  .btn img {
+    width: 14px; /* Very small icon for tiny screens */
+    margin-left: 5px;
+  }
+  .last {
+    color: black;
+  }
+}

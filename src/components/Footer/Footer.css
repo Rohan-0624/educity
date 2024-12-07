@@ -1,0 +1,66 @@
+/* General styles for the footer */
+.footer {
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #797979;
+  padding: 15px 0;
+}
+
+.footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 10px 0; /* Reduce padding for medium screens */
+  }
+
+  .footer ul li {
+    margin-left: 15px; /* Reduce space between list items */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    flex-direction: column; /* Stack footer content vertically */
+    text-align: center; /* Center align the items when stacked */
+  }
+
+  .footer ul {
+    display: flex;
+    flex-direction: column; /* Stack the list items vertically */
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .footer ul li {
+    margin-left: 0;
+    margin-top: 10px; /* Space between items in the stacked footer */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer ul {
+    margin-top: 15px;
+  }
+
+  .footer ul li {
+    margin-top: 8px; /* Increase space between list items */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 8px 0; /* Further reduce padding for very small screens */
+  }
+
+  .footer ul li {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin-top: 8px; /* Reduce spacing between items */
+  }
+}

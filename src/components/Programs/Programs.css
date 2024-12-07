@@ -1,0 +1,82 @@
+.programs {
+  margin: 80px auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow the elements to wrap on smaller screens */
+}
+
+.programs img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.program {
+  flex-basis: 31%;
+  position: relative;
+  margin-bottom: 20px; /* Add margin for spacing between programs */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+.caption {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 15, 152, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  padding-top: 70%;
+  transition: opacity 0.4s, padding-top 0.4s; /* Transition only opacity and padding-top */
+}
+
+.caption img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.program:hover .caption {
+  opacity: 1;
+  padding-top: 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .programs {
+    justify-content: space-around; /* Adjust alignment for smaller screens */
+  }
+
+  .program {
+    flex-basis: 48%; /* Adjust the width to fit two items per row */
+  }
+
+  .caption {
+    padding-top: 50%; /* Adjust padding to ensure a good fit */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .programs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* Center programs on very small screens */
+  }
+
+  .program {
+    flex-basis: 100%; /* Full width for each item on small screens */
+  }
+
+  .caption {
+    padding-top: 40%; /* Adjust the padding for smaller screens */
+  }
+}

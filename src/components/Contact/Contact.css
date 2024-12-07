@@ -1,0 +1,186 @@
+/* Global Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: "Arial", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Contact Section Styling */
+.contact {
+  margin: 80px auto;
+  max-width: 90%;
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.contact-col {
+  flex-basis: 46%;
+  color: #676767;
+  margin-bottom: 30px; /* Add space between columns */
+}
+
+.contact-col h3 {
+  color: #000f38;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 29px;
+  margin-bottom: 20px;
+  font-family: "Helvetica", sans-serif;
+}
+
+.contact-col h3 img {
+  width: 35px;
+  margin-left: 10px;
+}
+
+.contact-col p {
+  max-width: 450px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Contact List Items */
+.contact-col ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-col ul li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contact-col ul li img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+/* Form Styling */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact form input,
+.contact form textarea {
+  display: block;
+  width: 100%;
+  background: #ebecfe;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border: 1px solid #000f38; /* Highlight the form input on focus */
+}
+
+.contact form textarea {
+  resize: vertical; /* Allow resizing of the textarea */
+  min-height: 150px; /* Ensure sufficient height for text area */
+}
+
+.contact form button {
+  background-color: #000f38;
+  color: #fff;
+  padding: 14px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+  background-color: #004080; /* Darken button on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact {
+    justify-content: center; /* Center the content on smaller screens */
+  }
+
+  .contact-col {
+    flex-basis: 100%; /* Make each column take full width */
+  }
+
+  .contact-col h3 {
+    font-size: 24px; /* Adjust heading size for smaller screens */
+    text-align: center;
+  }
+
+  .contact-col h3 img {
+    margin-left: 0;
+  }
+
+  .contact-col ul li {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: flex-start;
+    margin: 15px 0;
+  }
+
+  .contact-col ul li img {
+    margin-bottom: 10px;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    padding: 12px;
+    font-size: 15px; /* Adjust form field size */
+  }
+
+  .contact form button {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-col h3 {
+    font-size: 20px; /* Further reduce heading font size */
+  }
+
+  .contact-col ul li {
+    margin: 10px 0; /* Adjust margin for very small screens */
+  }
+
+  .contact form input,
+  .contact form textarea {
+    padding: 10px;
+    font-size: 14px; /* Further reduce font size for form elements */
+  }
+
+  .contact form button {
+    padding: 10px 15px;
+    font-size: 14px; /* Adjust button size for small screens */
+  }
+}

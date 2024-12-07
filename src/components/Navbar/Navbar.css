@@ -1,0 +1,125 @@
+/* Base Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  width: 180px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 20px;
+  font-size: 18px;
+}
+
+.dark-nav {
+  background: #212ea0;
+  transition: 0.5s;
+}
+
+.Menu_icon {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -190px; /* Initially hidden */
+  width: 150px;
+  height: 100%;
+  background: rgb(235, 220, 220), 0.5;
+  padding-top: 60px;
+  transition: right 0.3s ease;
+  display: none; /* Hidden by default */
+}
+
+.sidebar.open {
+  right: 0; /* Show sidebar when open */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.sidebar ul li {
+  border: 1px black solid;
+  width: 140px;
+  background-color: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.sidebar ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+}
+
+.desktop-nav li {
+  margin-right: 20px;
+}
+
+.desktop-nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* On small screens (tablet and below), hide the desktop nav and show the mobile menu icon */
+  .desktop-nav {
+    display: none;
+  }
+
+  .Menu_icon {
+    display: block;
+  }
+
+  /* Make the sidebar visible on mobile */
+  .sidebar {
+    display: block;
+  }
+
+  .dark-nav {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjustments for smaller mobile screens */
+  .sidebar ul li {
+    display: block;
+    font-size: 18px;
+  }
+
+  .sidebar ul li a {
+    font-size: 18px;
+  }
+  #last {
+    border-top-right-radius: none;
+    border-top-left-radius: none;
+  }
+}

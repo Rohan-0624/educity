@@ -1,0 +1,235 @@
+.testimonials {
+  margin: 80px auto;
+  padding: 0 80px;
+  position: relative;
+  max-width: 1200px;
+}
+
+/* Slider navigation buttons */
+.next-btn,
+.back-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25%);
+  padding: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #213ea0;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-btn img,
+.back-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.back-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+/* Slider container */
+.slider {
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  width: 400%; /* 4 slides visible at once */
+  transition: transform 0.5s ease;
+}
+
+.slider ul li {
+  list-style: none;
+  padding: 20px;
+  width: 25%; /* Adjust based on the number of slides to show per view */
+}
+
+.slide {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  color: #676767;
+  line-height: 1.4;
+}
+
+.slide img {
+  width: 65px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: solid 4px #212ea0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.user-info h3 {
+  color: #212ea0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+  .testimonials {
+    padding: 0 30px;
+  }
+
+  /* Adjust slider for 3 slides visible on medium screens */
+  .slider ul {
+    width: 300%;
+  }
+
+  .slider ul li {
+    width: 33.33%; /* 3 slides per view */
+  }
+
+  .slide {
+    padding: 30px; /* Adjust padding for medium screens */
+  }
+
+  .next-btn,
+  .back-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .user-info {
+    font-size: 15px;
+  }
+
+  .user-info img {
+    width: 55px; /* Adjust image size for medium screens */
+    border-width: 3px;
+  }
+
+  .testimonial-text p {
+    font-size: 14px;
+  }
+}
+
+/* For small screens (phones) */
+@media screen and (max-width: 768px) {
+  .testimonials {
+    padding: 0 20px; /* Less padding on small screens */
+  }
+
+  /* Adjust slider for 2 slides visible on smaller screens */
+  .slider ul {
+    width: 200%;
+  }
+
+  .slider ul li {
+    width: 50%; /* 2 slides per view */
+  }
+
+  .slide {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .next-btn,
+  .back-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .user-info {
+    font-size: 14px;
+  }
+
+  .user-info img {
+    width: 45px; /* Adjust image size for small screens */
+    border-width: 2px;
+  }
+
+  .testimonial-text p {
+    font-size: 12px;
+  }
+}
+
+/* For very small screens (extra small phones) */
+@media screen and (max-width: 480px) {
+  .testimonials {
+    padding: 0 10px; /* Even less padding on very small screens */
+  }
+
+  /* Adjust slider for 1 slide visible on very small screens */
+  .slider ul {
+    display: flex;
+    width: 100%;
+    overflow: hidden; /* Hide the overflow to make the swipe effect work */
+    padding: 0;
+    margin: 0;
+  }
+
+  .slider ul li {
+    width: 100%; /* 1 slide per view */
+    transition: transform 0.3s ease; /* Smooth transition for swipe effect */
+  }
+
+  .slide {
+    padding: 15px; /* Adjust padding for very small screens */
+    box-sizing: border-box;
+  }
+
+  .slider {
+    touch-action: pan-y; /* Allow vertical touch action, disabling horizontal drag */
+    overflow: hidden; /* Ensure overflow is hidden for smooth sliding */
+  }
+
+  /* The user info section */
+  .user-info {
+    font-size: 12px;
+  }
+
+  .user-info img {
+    width: 40px; /* Adjust image size for extra small screens */
+    border-width: 2px;
+  }
+
+  .testimonial-text p {
+    font-size: 10px;
+  }
+
+  /* Add CSS for swipe effect */
+  .slider {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  .slider ul {
+    display: flex;
+    transition: transform 0.3s ease; /* Enable sliding transition */
+  }
+
+  .slider ul li {
+    flex: 0 0 100%; /* Each item takes up the full width */
+  }
+
+  /* Use :active state to simulate swipe */
+  .slider:active ul {
+    transform: translateX(-100%); /* Move to the next slide on swipe */
+  }
+
+  .slider:active ul li {
+    transition: transform 0.3s ease;
+  }
+}

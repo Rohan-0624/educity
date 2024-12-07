@@ -1,0 +1,168 @@
+.about {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  flex-wrap: wrap; /* Ensures the content wraps on smaller screens */
+}
+
+.about-left {
+  flex-basis: 40%;
+  position: relative;
+}
+
+.about-right {
+  flex-basis: 56%;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.play-icon {
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about h3 {
+  font-weight: 600;
+  font-size: 19px;
+  color: #212ea0;
+}
+
+.about h2 {
+  font-size: 37px;
+  color: #000f38;
+  margin: 10px 0;
+  max-width: 400px;
+}
+
+.about p {
+  color: #676767;
+  margin-bottom: 17px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+  .about {
+    flex-direction: column; /* Stack the left and right sections */
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .about-left {
+    flex-basis: 70%; /* Adjust the left section width for medium screens */
+    margin-bottom: 30px;
+  }
+
+  .about-right {
+    flex-basis: 90%; /* Adjust the right section width for medium screens */
+  }
+
+  .about-img {
+    width: 80%; /* Adjust image size for tablets */
+    margin: 0 auto;
+  }
+
+  .play-icon {
+    width: 50px; /* Adjust the play icon size for smaller screens */
+  }
+
+  .about h2 {
+    font-size: 30px; /* Adjust font size for medium screens */
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .about h3 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .about p {
+    font-size: 15px; /* Reduce the font size for smaller screens */
+  }
+}
+
+/* For small phones */
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 0 15px;
+  }
+
+  .about-left {
+    flex-basis: 100%; /* Take full width on small screens */
+    margin-bottom: 20px;
+  }
+
+  .about-right {
+    flex-basis: 100%; /* Take full width on small screens */
+  }
+
+  .about-img {
+    width: 90%; /* Adjust image size for smaller screens */
+    margin: 0 auto;
+  }
+
+  .play-icon {
+    width: 40px; /* Smaller play icon on small screens */
+  }
+
+  .about h2 {
+    font-size: 24px; /* Smaller heading font size */
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about h3 {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .about p {
+    font-size: 14px; /* Adjust text size */
+  }
+}
+
+/* For very small phones */
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 0 10px;
+  }
+
+  .about-left {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+
+  .about-right {
+    flex-basis: 100%;
+  }
+
+  .about-img {
+    width: 100%; /* Full-width image on very small screens */
+  }
+
+  .play-icon {
+    width: 35px; /* Adjust play icon size */
+  }
+
+  .about h2 {
+    font-size: 22px; /* Further reduced heading font size */
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about h3 {
+    font-size: 14px; /* Adjust font size for small screens */
+  }
+
+  .about p {
+    font-size: 13px; /* Smaller text for small screens */
+  }
+}
